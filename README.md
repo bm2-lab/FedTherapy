@@ -26,13 +26,19 @@ To address the aforementioned challenges, this project aims to systematically in
 ```bash
 python preprocess.py
 ```
+![image](/fig/doc/dataset.png)
 
 ### Federated learning based transfer learning model pre-training
+This step simulates the process of splitting the patient domain dataset as private data and using federated learning to train the model.
+Federated learning uses the FedAvg algorithm.
 ```bash
 python Fed.py
 ```
+![image](/fig/doc/federate.png)
+![image](/fig/doc/transfer.png)
 
 ### Fine-tuning the model with labeled source domain data
+Only fine tune the model on the source domain and test the model on the target domain to verify its migration ability.
 ```bash
 python ft.py
 ```
